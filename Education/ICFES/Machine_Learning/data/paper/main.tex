@@ -1,1 +1,106 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
 
+% --- PAQUETES BÁSICOS Y CODIFICACIÓN ---
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{hyperref}
+
+% Configuración de hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=blue,
+    urlcolor=blue
+}
+
+\begin{document}
+
+% --- TÍTULO Y AUTORES ---
+\title{Título Formal de la Publicación Científica o Artículo de Investigación}
+
+\author{Juan~David~Wilches~Gutierrez,
+        y~Nombre~Segundo~Autor%
+\thanks{J. D. Wilches Gutierrez trabaja en el área de Ciencia de Datos e Inteligencia Artificial (contacto: usuario@dominio.com).}%
+\thanks{Manuscrito recibido el 5 de agosto de 2026; revisado el 10 de agosto de 2026.}}
+
+% Encabezado Superior
+\markboth{Revista de Inteligencia Artificial y Ciencia de Datos,~Vol.~14, No.~8,~Agosto~2026}%
+{Wilches \MakeLowercase{\textit{et al.}}: Título Corto del Artículo}
+
+\maketitle
+
+% --- RESUMEN Y PALABRAS CLAVE ---
+\begin{abstract}
+Este documento presenta la plantilla formal en LaTeX optimizada para la publicación de artículos científicos en revistas indexadas (IEEE, Springer, Elsevier). El resumen debe sintetizar en un solo párrafo (entre 150 y 250 palabras) el problema investigado, la metodología propuesta, los experimentos realizados y los principales hallazgos obtenidos, incluyendo métricas clave de desempeño.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Aprendizaje Automático, Modelos Predictivos, LaTeX, Publicación Científica, Procesamiento de Datos.
+\end{IEEEkeywords}
+
+% --- SECCIÓN I: INTRODUCCIÓN ---
+\section{Introducción}
+\IEEEPARstart{L}{a} contextualización del problema constituye el primer paso para establecer el estado del arte. En esta sección se deben detallar los antecedentes relevantes, la motivación del trabajo y las limitaciones de los enfoques existentes \cite{ref_ejemplo1}.
+
+La contribución principal de este trabajo se resume en los siguientes puntos:
+\begin{itemize}
+    \item Desarrollo de un pipeline automatizado de extracción e ingesta de datos.
+    \item Implementación y evaluación comparativa de algoritmos de regresión y redes neuronales.
+\end{itemize}
+
+% --- SECCIÓN II: TRABAJO RELACIONADO ---
+\section{Trabajo Relacionado}
+Análisis crítico de las metodologías previas desarrolladas en la literatura científica \cite{ref_ejemplo2}.
+
+% --- SECCIÓN III: METODOLOGÍA Y MODELAMIENTO ---
+\section{Metodología}
+\subsection{Formulación Matemática}
+Sea $Y_i$ el valor real observacional para la $i$-ésima muestra y $\hat{Y}_i$ la predicción generada por el modelo parametrizado por $\theta$. La función de pérdida de error cuadrático medio se expresa como:
+
+\begin{equation}
+\mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^{N} \left( Y_i - \hat{Y}_i \right)^2 + \lambda \|\theta\|_2^2
+\label{eq:loss_function}
+\end{equation}
+
+Donde $\lambda$ representa el hiperparámetro de regularización $L_2$.
+
+% --- SECCIÓN IV: EXPERIMENTACIÓN Y RESULTADOS ---
+\section{Resultados y Discusión}
+En la Tabla \ref{tab:resultados} se sintetiza el desempeño comparativo entre las distintas arquitecturas evaluadas.
+
+\begin{table}[htbp]
+\caption{Comparativa de Rendimiento de los Modelos}
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Modelo} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
+\midrule
+Regresión Lineal & 45.21 & 35.12 & 0.2105 \\
+Random Forest & 38.45 & 29.80 & 0.2840 \\
+Red Neuronal PFF & \textbf{36.12} & \textbf{27.45} & \textbf{0.2969} \\
+\bottomrule
+\end{tabular}
+\label{tab:resultados}
+\end{center}
+\end{table}
+
+% --- SECCIÓN V: CONCLUSIONES ---
+\section{Conclusiones}
+Se presentó un marco metodológico sólido para la evaluación de modelos predictivos. Los trabajos futuros se enfocarán en la optimización de hiperparámetros mediante búsqueda bayesiana.
+
+% --- AGRADECIMIENTOS ---
+\section*{Agradecimientos}
+Agradecimientos a las instituciones que financiaron o facilitaron el acceso a las fuentes de datos.
+
+% --- REFERENCIAS BIBLIOGRÁFICAS ---
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
