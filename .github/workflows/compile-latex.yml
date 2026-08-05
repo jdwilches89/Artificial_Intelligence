@@ -1,0 +1,30 @@
+name: Compilar Documento LaTeX a PDF
+
+on:
+  push:
+    branches: [ "main", "master" ]
+    paths:
+      - '**.tex'
+      - '**.bib'
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Obtener el código del repositorio
+      - name: Checkout del Repositorio
+        uses: actions/checkout@v4
+
+      # 2. Compilar el archivo LaTeX usando TeX Live completo
+      - name: Compilar LaTeX
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: Education/ICFES/Machine_Learning/data/paper/main.tex 
+          args: "-pdf -interaction=nonstopmode -halt-on-error"
+
+      # 3. Subir el PDF generado como Artefacto listo para descargar
+      - name: Guardar PDF como Artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: Publicacion-Cientifica-PDF
+          path: paper/main.pdf        # <-- Nombre y ruta del PDF generado
