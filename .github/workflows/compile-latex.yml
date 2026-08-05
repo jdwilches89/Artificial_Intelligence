@@ -13,7 +13,7 @@ jobs:
     steps:
       # 1. Obtener el código del repositorio
       - name: Checkout del Repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       # 2. Compilar el archivo LaTeX usando TeX Live completo
       - name: Compilar LaTeX
