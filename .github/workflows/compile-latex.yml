@@ -19,7 +19,7 @@ jobs:
       - name: Compilar LaTeX
         uses: xu-cheng/latex-action@v3
         with:
-          root_file: Education/ICFES/Machine_Learning/data/paper/main.tex 
+          root_file: Artificial_Intelligence/Education/ICFES/Machine_Learning/data/paper/main.tex 
           args: "-pdf -interaction=nonstopmode -halt-on-error"
 
       # 3. Subir el PDF generado como Artefacto listo para descargar
