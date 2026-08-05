@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{Acceso A Datos Abiertos Del Instituo Colombiano Para La Evaluación De La Educación Superior ICFES Para El Desarrollo De Modelos De Machine Learning Y Redes Neuronales}
+\title{Acceso A Datos Abiertos Del Instituo Colombiano Para La Evaluación De La Educación Superior (ICFES) Para El Desarrollo De Modelos De Machine Learning Y Redes Neuronales}
 
 \author{Juan~David~Wilches~Gutierrez}
 \thanks{contacto: jdwilches89@gmail.com}
@@ -37,51 +37,10 @@ Este documento presenta la plantilla formal en LaTeX optimizada para la publicac
 Datos Abiertos, Modelo De Datos.
 \end{IEEEkeywords}
 
-% --- SECCIÓN I: INTRODUCCIÓN ---
-\section{Introducción}
-\IEEEPARstart{L}{a} contextualización del problema constituye el primer paso para establecer el estado del arte. En esta sección se deben detallar los antecedentes relevantes, la motivación del trabajo y las limitaciones de los enfoques existentes \cite{ref_ejemplo1}.
-
-La contribución principal de este trabajo se resume en los siguientes puntos:
-\begin{itemize}
-    \item Desarrollo de un pipeline automatizado de extracción e ingesta de datos.
-    \item Implementación y evaluación comparativa de algoritmos de regresión y redes neuronales.
-\end{itemize}
-
-% --- SECCIÓN II: TRABAJO RELACIONADO ---
-\section{Trabajo Relacionado}
-Análisis crítico de las metodologías previas desarrolladas en la literatura científica \cite{ref_ejemplo2}.
-
 % --- SECCIÓN III: METODOLOGÍA Y MODELAMIENTO ---
-\section{Metodología}
-\subsection{Formulación Matemática}
+\section{Extracción De Datos Abiertos ICFES}
+\subsection{Fuente De Los Datos}
 Sea $Y_i$ el valor real observacional para la $i$-ésima muestra y $\hat{Y}_i$ la predicción generada por el modelo parametrizado por $\theta$. La función de pérdida de error cuadrático medio se expresa como:
-
-\begin{equation}
-\mathcal{L}(\theta) = \frac{1}{N} \sum_{i=1}^{N} \left( Y_i - \hat{Y}_i \right)^2 + \lambda \|\theta\|_2^2
-\label{eq:loss_function}
-\end{equation}
-
-Donde $\lambda$ representa el hiperparámetro de regularización $L_2$.
-
-% --- SECCIÓN IV: EXPERIMENTACIÓN Y RESULTADOS ---
-\section{Resultados y Discusión}
-En la Tabla \ref{tab:resultados} se sintetiza el desempeño comparativo entre las distintas arquitecturas evaluadas.
-
-\begin{table}[htbp]
-\caption{Comparativa de Rendimiento de los Modelos}
-\begin{center}
-\begin{tabular}{lccc}
-\toprule
-\textbf{Modelo} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
-\midrule
-Regresión Lineal & 45.21 & 35.12 & 0.2105 \\
-Random Forest & 38.45 & 29.80 & 0.2840 \\
-Red Neuronal PFF & \textbf{36.12} & \textbf{27.45} & \textbf{0.2969} \\
-\bottomrule
-\end{tabular}
-\label{tab:resultados}
-\end{center}
-\end{table}
 
 % --- SECCIÓN V: CONCLUSIONES ---
 \section{Conclusiones}
